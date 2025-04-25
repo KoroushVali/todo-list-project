@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/efe62db25f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <dialog class="bg-white rounded-sm m-auto w-100" id="add-task-dialog">
+      <form action="" method="dialog" class="flex justify-center flex-col p-4 gap-y-1" id="add-task-dialog-form">
+        <div class="flex flex-col">
+          <label for="task-name">Task Name</label>
+          <input
+            type="text"
+            id="task-name"
+            class="bg-white border-gray-300 border-1 rounded-sm p-2"
+            placeholder="Name of your task"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="task-desc">Task Description</label>
+          <input
+            type="text"
+            id="task-desc"
+            class="bg-white border-gray-300 border-1 rounded-sm h-12 p-2"
+            placeholder="Information about your task"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="task-date">Task Date</label>
+          <input
+            type="date"
+            id="task-date"
+            class="bg-white border-gray-300 border-1 rounded-sm h-12 p-2"
+            placeholder="Until when should it be done?"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="task-priority">Task Priority</label>
+          <select
+            type="text"
+            id="task-priority"
+            class="bg-white border-gray-300 border-1 rounded-sm h-12 p-2"
+            placeholder="How important is the task?"
+          >
+          <option value="low">low</option>
+          <option value="medium">medium</option>
+          <option value="high">high</option>
+          </select>
+          <label for="task-project">Task Project</label>
+          <select
+            type="text"
+            id="task-project"
+            class="bg-white border-gray-300 border-1 rounded-sm h-12 p-2"
+            placeholder="What project should it be in?"
+          >
+          </select>
+        </div>
+        <div class="flex justify-end gap-x-2 mt-2">
+          <button
+            class="bg-gray-300 py-2 px-3 rounded-sm hover:bg-gray-400 transition cursor-pointer"
+          >
+            Cancel
+          </button>
+          <button
+            class="bg-red-300 py-2 px-3 rounded-sm hover:bg-red-400 transition cursor-pointer"
+          >
+            Create
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="add-project-dialog" class="m-auto w-140">
+      <form action="" class="flex flex-col p-4" id="add-project-dialog-form">
+        <div class="flex flex-col">
+        <label for="project-name">Task Name</label>
+        <input
+          type="text"
+          id="project-name"
+          class="bg-white border-gray-300 border-1 rounded-sm p-2"
+          placeholder="Name of your project"
+        />
+        </div>
+        <div class="flex justify-end gap-x-2 mt-2">
+          <button
+            class="bg-gray-300 py-2 px-3 rounded-sm hover:bg-gray-400 transition cursor-pointer"
+          >
+            Cancel
+          </button>
+          <button
+            class="bg-red-300 py-2 px-3 rounded-sm hover:bg-red-400 transition cursor-pointer"
+          >
+            Create
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <div class="flex">
+      <div class="flex-1 bg-slate-200 h-[100vh] p-3 flex flex-col">
+        <div class="flex items-center gap-x-2">
+          <img
+            src="public/icons/user.png"
+            alt=""
+            class="w-12 h-12 rounded-full"
+          />
+          <p class="text-2xl">Welcome, User</p>
+        </div>
+        <hr class="mt-2 border-slate-700" />
+        <button
+          class="flex cursor-pointer items-center gap-x-2 mt-2 hover:bg-slate-300 p-1 rounded-lg"
+          id="add-task-button"
+        >
+          <img src="public/icons/add.png" alt="" class="w-8 h-8" />
+          <p class="text-xl">Add task</p>
+        </button>
+        <button
+          class="flex cursor-pointer items-center gap-x-2 mt-2 hover:bg-slate-300 p-1 rounded-lg" id="add-project-button"
+        >
+          <img src="public/icons/add.png" alt="" class="w-8 h-8" />
+          <p class="text-xl">Add project</p>
+        </button>
+        <div
+          class="flex items-center gap-x-2 cursor-pointer mt-2 hover:bg-slate-300 p-1 rounded-lg"
+        >
+          <img src="public/icons/folder.png" alt="" class="w-8 h-8" />
+          <p class="text-xl">Default Project</p>
+        </div>
+      </div>
+      <div class="flex-5 p-3">
+        <h2 class="text-2xl">Your tasks:</h2>
+        <div class="grid grid-cols-4 mt-6 gap-x-3" id="tasks-container">
+          <div
+            class="p-4 bg-slate-100 rounded-lg hover:bg-slate-200 transition"
+          >
+            <h4 class="text-xl font-bold">Make a website</h4>
+            <p>Make a website for one of my clients</p>
+            <div class="pb-2 pt-2">
+              <hr />
+            </div>
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="">Due date : 2025-04-01</p>
+                <p class="">Priority : High</p>
+              </div>
+              <div class="flex">
+                <img
+                  src="public/icons/check-tast-done.png"
+                  alt=""
+                  class="w-8 h-8 cursor-pointer"
+                /><img
+                  src="public/icons/delete-task.png"
+                  alt=""
+                  class="w-8 h-8 cursor-pointer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/main.js"></script>
+  </body>
+</html>
