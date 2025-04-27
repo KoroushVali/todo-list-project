@@ -100,7 +100,7 @@
       </form>
     </dialog>
     <div class="flex">
-      <div class="flex-1 bg-slate-200 h-[100vh] p-3 flex flex-col">
+      <div class="flex-1 bg-slate-200 h-[100vh] p-3 flex flex-col" id="project-tabs">
         <div class="flex items-center gap-x-2">
           <img
             src="public/icons/user.png"
@@ -123,42 +123,10 @@
           <img src="public/icons/add.png" alt="" class="w-8 h-8" />
           <p class="text-xl">Add project</p>
         </button>
-        <div
-          class="flex items-center gap-x-2 cursor-pointer mt-2 hover:bg-slate-300 p-1 rounded-lg"
-        >
-          <img src="public/icons/folder.png" alt="" class="w-8 h-8" />
-          <p class="text-xl">Default Project</p>
-        </div>
       </div>
       <div class="flex-5 p-3">
         <h2 class="text-2xl">Your tasks:</h2>
         <div class="grid grid-cols-4 mt-6 gap-x-3" id="tasks-container">
-          <div
-            class="p-4 bg-slate-100 rounded-lg hover:bg-slate-200 transition"
-          >
-            <h4 class="text-xl font-bold">Make a website</h4>
-            <p>Make a website for one of my clients</p>
-            <div class="pb-2 pt-2">
-              <hr />
-            </div>
-            <div class="flex items-center justify-between">
-              <div>
-                <p class="">Due date : 2025-04-01</p>
-                <p class="">Priority : High</p>
-              </div>
-              <div class="flex">
-                <img
-                  src="public/icons/check-tast-done.png"
-                  alt=""
-                  class="w-8 h-8 cursor-pointer"
-                /><img
-                  src="public/icons/delete-task.png"
-                  alt=""
-                  class="w-8 h-8 cursor-pointer"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
